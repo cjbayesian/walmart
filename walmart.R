@@ -53,7 +53,7 @@ for(year in min(opendate[,3]):max(opendate[,3]) )
    print(year)
 	for(month in 1:12)
 	{
-      png(paste(year,'_',100+month,'.png',sep=''),width=750,height=500)
+      png(paste('plots/'year,'_',100+month,'.png',sep=''),width=750,height=500)
       US(main='The Walmart Invasion')
       points(zips$longitude[index_zip[1:(tot_stores+new_stores[i])] ],
             zips$latitude[index_zip[1:(tot_stores+new_stores[i])]],

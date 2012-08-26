@@ -8,8 +8,8 @@ Contact: corey.chivers@mail.mcgill.ca
 Date: 2012-08-26
 
 Walmart data from:
-http://www.econ.umn.edu/~holmes/data/WalMart/index.html
+(http://www.econ.umn.edu/~holmes/data/WalMart/index.html)
 
 Zipcode data from:
-http://www.boutell.com/zipcodes/
+(http://www.boutell.com/zipcodes/)
 
