@@ -82,6 +82,8 @@ for(year in min(opendate[,3]):max(opendate[,3]) )
 }
 
 #system('convert -delay 10 *.png ani.gif') ##This makes a huge file - not recommended.
+
+## This step requires a POSIX system with mplayer installed ##
 system('for i in `seq 1 3`; do mencoder mf://plots/*.png -sws 10 -vf scale=800:592 -ovc x264 -x264encopts qp=40:subq=7:pass=$i -o output/output.avi; done')
 
 
