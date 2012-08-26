@@ -8,7 +8,7 @@ zips<-zips[zips$state!="VI",] #Virgin Islands
 
 plot(zips$longitude,zips$latitude)
 
-d<-read.csv('store_openings.csv')
+d<-read.csv('data/store_openings.csv')
 d$OPENDATE<-as.character(d$OPENDATE)
 opendate<-t(simplify2array(strsplit(d$OPENDATE,"/")))
 opendate<-array(as.integer(opendate),dim=c(nrow(opendate),3))
@@ -81,8 +81,8 @@ for(year in min(opendate[,3]):max(opendate[,3]) )
    }
 }
 
-#system('convert -delay 10 *.png ani.gif')
-system('mencoder mf://*.png -mf fps=15:type=png -ovc copy -oac copy -o output.avi')
+#system('convert -delay 10 *.png ani.gif') ##This makes a huge file - not recommended.
+system('for i in `seq 1 3`; do mencoder mf://plots/*.png -sws 10 -vf scale=800:592 -ovc x264 -x264encopts qp=40:subq=7:pass=$i -o output/output.avi; done')
 
 
 
