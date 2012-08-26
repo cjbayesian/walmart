@@ -1,5 +1,5 @@
 
-zips<-read.csv('zipcodes/zipcode.csv')
+zips<-read.csv('data/zipcodes/zipcode.csv')
 zips<-zips[zips$state!="AK",] #Alaska
 zips<-zips[zips$state!="HI",] #Hawaii
 zips<-zips[zips$state!="PR",] #Puerto Rico 
